@@ -43,16 +43,15 @@ void solveSystem(double& x, double& y, double& z, double tol) {
 }
 
 int main() {
-    setlocale(LC_ALL, "Ukrainian");
     double x = 1.0, y = 1.0, z = 1.0, tol = 0.0001;
-    std::cout << "Розв'язання нелінійної системи градієнтом\n";
-    std::cout << "Початкові значення: x=" << x << " y=" << y << " z=" << z << std::endl;
+    std::cout << "Rozv’yazannya nelineynoyi systemy hradiyentom\n";
+    std::cout << "Pochatkovi znachennya: x=" << x << " y=" << y << " z=" << z << std::endl;
     solveSystem(x, y, z, tol);
-    std::cout << "\nЗнайдено:\nx = " << x << "\ny = " << y << "\nz = " << z << std::endl;
-    std::cout << "\nПеревірка:\n";
+    std::cout << "\nZnaideno:\nx = " << x << "\ny = " << y << "\nz = " << z << std::endl;
+    std::cout << "\nPerevirka:\n";
     std::cout << "R1 = " << R1(x,y,z) << "\n";
     std::cout << "R2 = " << R2(x,y,z) << "\n";
     std::cout << "R3 = " << R3(x,y,z) << "\n";
-    std::cout << "\nСумарна нев'язка: " << errorFunction(x,y,z)*2 << std::endl;
+    std::cout << "\nSumarna nevyazka: " << errorFunction(x,y,z)*2 << std::endl;
     return 0;
 }
